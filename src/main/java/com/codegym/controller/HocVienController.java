@@ -21,7 +21,7 @@ HocVienService hocVienService = new HocVienService();
 
     @GetMapping("/edit")
     public String showedit(HttpServletRequest request, @RequestParam int index) {
-        request.setAttribute("customer", hocVienService.list.get(index));
+        request.setAttribute("hocvien", hocVienService.list.get(index));
         return "/edit.jsp";
     }
 

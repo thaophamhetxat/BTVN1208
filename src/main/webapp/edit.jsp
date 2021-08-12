@@ -18,8 +18,8 @@
     <form  method="post">
         <table class="table">
             <thead class="thead-dark">
-            <td>ID</td>
             <td>Name</td>
+            <td>date</td>
             <td>address</td>
             <td>phone</td>
             <td>email</td>
