@@ -22,7 +22,15 @@ public class HocVienService {
     public void edit(HocVien hocVien,int index){
         list.set(index,hocVien);
     }
-    public void findByName(String name){
-        list.indexOf(name);
-    }
+
+        public static ArrayList<HocVien> findByName(String name) {
+            ArrayList<HocVien> list = new ArrayList<>();
+            for (int i = 0; i < list.size(); i++) {
+                if (list.get(i).getName().contains(name)) {
+                    list.add(list.get(i));
+                }
+            }
+            return list;
+        }
+
 }
