@@ -49,9 +49,11 @@ HocVienService hocVienService = new HocVienService();
         return "redirect:/home";
     }
 
-    @GetMapping("/find")
-    public String find(@ModelAttribute HocVien hocVien) {
-        hocVienService.findByName(name);
+    @PostMapping("/find")
+    public String findByName(HttpServletRequest request) {
+        String findName = request.getParameter("findName");
+        hocVienService.findByName(findName);
+        request.setAttribute("list", hocVienService.list);
         return "redirect:/home";
     }
 }
